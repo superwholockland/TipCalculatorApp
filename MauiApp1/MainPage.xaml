@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+            <Label
+                Text="Tip percentage calculator"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Tip percentage calculator"
+                FontSize="30"
+                HorizontalOptions="Center" />
+
+            <HorizontalStackLayout
+                Spacing="10"
+                Padding="15,0"
+                HorizontalOptions="Center">
+
+                <Label
+                Text="What is"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="what is"
+                FontSize="18"
+                HorizontalOptions="Center"/>
+
+                <Editor
+                x:Name="input1"
+                Keyboard="Numeric"
+                Placeholder="%"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Type number here"
+                FontSize="Default"
+                HorizontalOptions="Center"/>
+
+                <Label
+                Text="% of $"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="% of"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+                <Editor
+                x:Name="input2"
+                Keyboard="Numeric"
+                Placeholder="$"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="$"
+                FontSize="Default"
+                HorizontalOptions="Center"
+                MaximumWidthRequest="10"/>
+
+                <Label
+                x:Name="OutputOne"
+                Text="= $"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="= $"
+                FontSize="18"
+                HorizontalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="10"
+                Padding="15,0"
+                HorizontalOptions="Center">
+
+                <Label
+                x:Name="OutputThree"
+                Text=""
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description=""
+                FontSize="18"
+                HorizontalOptions="Center"/>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="10"
+                Padding="15,0"
+                HorizontalOptions="Center">
+
+                <Button
+                x:Name="TipAmountButton"
+                Text="Calculate"
+                SemanticProperties.Hint="Calculates Tip"
+                Clicked="Calculate_Tip"
+                HorizontalOptions="Center" />
+
+                <Button
+                x:Name="ClearTipAmount"
+                Text="Clear"
+                SemanticProperties.Hint="Clears above function"
+                Clicked="Clear_Calculate_Tip"
+                HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="10"
+                Padding="15,0"
+                HorizontalOptions="Center">
+
+                <Label
+                Text="$"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="$"
+                FontSize="18"
+                HorizontalOptions="Center"/>
+
+                <Editor
+                x:Name="input3"
+                Keyboard="Numeric"
+                Placeholder="$"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Type dollar amount here"
+                FontSize="Default"
+                HorizontalOptions="Center"/>
+
+                <Label
+                Text="is what percent (%) of $"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="is what percent (%) of $"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+                <Editor
+                x:Name="input4"
+                Keyboard="Numeric"
+                Placeholder="$"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Type dollar amount here"
+                FontSize="Default"
+                HorizontalOptions="Center" />
+
+                <Label
+                x:Name="OutputTwo"
+                Text="= %"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="= %"
+                FontSize="18"
+                HorizontalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <Button
+                x:Name="TipPercentButton"
+                Text="Calculate"
+                SemanticProperties.Hint="Calculates Tip Percentage"
+                Clicked="Calculate_Tip_Percentage"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
